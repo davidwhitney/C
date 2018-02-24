@@ -1,10 +1,8 @@
 function solve() {
-
   for (var i = 0; i < 8; i++) {        
     var mountains = getInput();      
     print(findLargest(mountains).k);
   }
-
 }
 
 function findLargest(mountains) {
@@ -31,4 +29,3 @@ module.exports = {
   getInput: getInput,
   findLargest: findLargest,
 }
-

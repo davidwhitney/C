@@ -2,7 +2,11 @@ require('../../../src/CodingGame');
 const descent = require('../../../src/Easy/TheDescent/Solution');
 
 test("solve grabs input and outputs the largest mountain", () => {
+  inputLines.push(9,8,7,6,5,4,3,2);
 
+  descent.solve();
+
+  expect(outputLines[0]).toBe(0);
 });
 
 test('findLargest finds the largest', () => {
