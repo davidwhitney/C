@@ -1,10 +1,9 @@
 function solve() {
-    let input = getInput();
-    let maxValue = Math.max(input);
+    let strengths = getInput();
+    
+    var ordered = strengths.sort((a, b) => a - b);
     let smallestDiff = Number.MAX_SAFE_INTEGER;
-
-    var ordered = input.sort((a, b) => a - b);
-    for(var index = 1; index < input.length; index++) {
+    for(var index = 1; index <= ordered.length; index++) {
         var last = ordered[index-1];
         var item = ordered[index];
         var diff = item - last;
@@ -16,7 +15,8 @@ function solve() {
   
   function getInput() {
     var input = [];
-    for (var i = 0; i < 8; i++)
+    var n = parseInt(readline());
+    for (var i = 0; i < n; i++)
     {        
         input.push(parseInt(readline()));
     }

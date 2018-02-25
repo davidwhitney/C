@@ -6,5 +6,5 @@ test("solve selects two horses with closest strength", () => {
 
     sut.solve();
 
-    expect(outputLines[0]).toBe("1");
+    expect(outputLines[0]).toBe(1);
 });
