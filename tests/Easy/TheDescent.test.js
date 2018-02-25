@@ -1,10 +1,10 @@
-require('../../../src/CodingGame');
-const descent = require('../../../src/Easy/TheDescent/Solution');
+require('../../src/CodingGame');
+const sut = require('../../src/Easy/TheDescent');
 
 test("solve grabs input and outputs the largest mountain", () => {
   inputLines.push(9,8,7,6,5,4,3,2);
 
-  descent.solve();
+  sut.solve();
 
   expect(outputLines[0]).toBe(0);
 });
@@ -15,7 +15,7 @@ test('findLargest finds the largest', () => {
     { k: 1, v: 2},
     { k: 2, v: 3},
   ]
-  var largest = descent.findLargest(input);
+  var largest = sut.findLargest(input);
 
   expect(largest.v).toBe(3);
 });
@@ -23,7 +23,7 @@ test('findLargest finds the largest', () => {
 test("getInput converts commandline inputs to object array", () => {
   inputLines.push("0", "1", "2");
 
-  var parsed = descent.getInput();
+  var parsed = sut.getInput();
 
   expect(parsed[0].v).toBe(0);
   expect(parsed[1].v).toBe(1);
