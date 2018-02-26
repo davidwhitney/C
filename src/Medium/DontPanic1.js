@@ -10,6 +10,13 @@ function solve() {
         }
 
         if (remote.ExitIsOnthisFloor(map)
+            && remote.TargetIsOtherWay(map, 'x')
+            && !remote.IsGoingToTurnAround(map)) {
+            remote.Block();
+            continue;
+        }
+
+        if (!remote.ExitIsOnthisFloor(map)
             && remote.TargetIsOtherWay(map, 'e')
             && !remote.IsGoingToTurnAround(map)) {
             remote.Block();
