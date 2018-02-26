@@ -13,7 +13,7 @@ function getLetters (targetLetters, map) {
         return m.find(x => x.char === letter.toUpperCase()) || m.find(x => x.char === "[");
     };
 
-    var selected = [];
+    let selected = [];
     targetLetters.split("").forEach(letter => selected.push(lookup(map, letter)));
 
     const buffer = [];
@@ -30,7 +30,7 @@ function getLetters (targetLetters, map) {
     }
 
     return buffer;
-};
+}
 
 function createMap (letterHeight, characterWidth) {
 
@@ -54,7 +54,7 @@ function createMap (letterHeight, characterWidth) {
         iteration++;
     }
     return dictionary;
-};
+}
 
 module.exports = {
     solve: solve
