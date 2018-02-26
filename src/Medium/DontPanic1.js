@@ -87,24 +87,16 @@ function LeadingClone (cloneFloor, clonePos, direction) {
     this.Block = function () { print("BLOCK"); }
 
     this.IsGoingToTurnAround = function (map) {
-        var result = map[this.location.floor].indexOf('b', this.location.position) > -1;
-        printErr("IsGoingToTurnAround: " + result);
-        return result;
+        return map[this.location.floor].indexOf('b', this.location.position) > -1;
     }
     this.ExitIsOnthisFloor = function (map) {
-        var result = map[this.location.floor].indexOf('x', 0) > -1;        
-        printErr("ExitIsOnthisFloor: " + result);
-        return result;
+        return map[this.location.floor].indexOf('x', 0) > -1;        
     }
     this.TargetIsLeft = function (map, c) {
-        var result = map[this.location.floor].indexOf(c, 0) < this.location.position;
-        printErr("TargetIsLeft: " + result);
-        return result;
+        return map[this.location.floor].indexOf(c, 0) < this.location.position;
     }
     this.TargetIsRight = function (map, c) {
-        var result = map[this.location.floor].indexOf(c, 0) > this.location.position;
-        printErr("TargetIsRight: " + result);
-        return result;
+        return map[this.location.floor].indexOf(c, 0) > this.location.position;
     }
     this.TargetIsOtherWay = function (map, c) {
         return this.direction == "LEFT" ? this.TargetIsRight(map, c) : this.TargetIsLeft(map, c);
